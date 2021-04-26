@@ -1,0 +1,32 @@
+<table class="container">
+  <thead *ngIf="cars">
+    <th>Araç</th>
+    <th>Günlük Fiyat</th>
+    <th>Açıklama</th>
+    <th>Kirala</th>
+    <th>Detaylar</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars">
+      <td>{{ car.carName }}</td>
+      <td>{{ car.dailyPrice }}</td>
+      <td>{{ car.description }}</td>
+      <td>
+        <button class="btn btn-success" (click)="addToCart(car)">Kirala</button>
+      </td>
+      <td>
+        <button routerLink="/cars/detail/{{ car.id }}" class="btn btn-success">
+          Detaylar
+        </button>
+      </td>
+    </tr>
+
+    <tr *ngIf="carDetailLoad">
+      <td>{{ carDetail.carName }}</td>
+      <td>{{ carDetail.brandName }}</td>
+      <td>{{ carDetail.colorName }}</td>
+      <td>{{ carDetail.dailyPrice }}</td>
+      <td>{{ carDetail.description }}</td>
+    </tr>
+  </tbody>
+</table>

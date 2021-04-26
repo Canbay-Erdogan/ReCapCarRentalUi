@@ -1,0 +1,80 @@
+<!-- <ul class="list-group">
+  <li routerLink="" [class]="getAllCarClass()" (click)="AllCars()">
+    Tüm Araçlar
+  </li>
+  <li
+    *ngFor="let brand of brands"
+    (click)="setActive(brand)"
+    routerLink="/cars/getbybrandid/{{brand.id}}"
+    [class]="getCurrentBrandClass(brand)"
+  >
+    {{ brand.name }}
+  </li>
+</ul> -->
+
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="AllBrand">
+      <h5 class="mb-0" style="font-family: sans-serif,Arial, Helvetica;">
+        <li class="list-group" type="button" data-toggle="collapse" data-target="#AllBrands" aria-expanded="true" aria-controls="AllBrands">
+          Tüm Araçların Listesi
+        </li>
+      </h5>
+    </div>
+
+    
+    <div id="AllBrands" class="collapse show" aria-labelledby="AllBrand" data-parent="#accordionExample">
+      <div class="card-body">
+
+        <ul class="list-group">
+          <li routerLink="" [class]="getAllCarClass()" (click)="AllCars()">
+            Tüm Araçlar
+          </li>
+          <li
+            *ngFor="let brand of brands"
+            (click)="setActive(brand)"
+            routerLink="/cars/getbybrandid/{{brand.id}}"
+            [class]="getCurrentBrandClass(brand)"
+          >
+            {{ brand.name }}
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="color">
+      <h5 class="mb-0" style="font-family: sans-serif,Arial, Helvetica;">
+        <li class="list-group" type="button" data-toggle="collapse" data-target="#colors" aria-expanded="true" aria-controls="color">
+          Tüm Renklerin Listesi
+        </li>
+      </h5>
+    </div>
+
+    
+    <div id="colors" class="collapse show" aria-labelledby="color" data-parent="#accordionExample">
+      <div class="card-body">
+
+        <ul class="list-group">
+          <li routerLink="" [class]="getAllCarClass()" (click)="AllCars()">
+            Tüm Renkler
+          </li>
+          <li
+            *ngFor="let color of colors"
+            (click)="setActive(brand)"
+            routerLink="/cars/getbycolorid/{{color.id}}"
+            [class]="getCurrentBrandClass(brand)"
+          >
+            {{ brand.name }}
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div> -->

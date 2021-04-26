@@ -1,0 +1,20 @@
+<table class="container">
+  <thead>
+    <th>Araç</th>
+    <th>Marka</th>
+    <th>Renk</th>
+    <th>Günlük Fiyat</th>
+    <th>Açıklama</th>
+    <th>Geri</th>
+  </thead>
+  <tbody>
+    <tr *ngIf="carDetail">
+      <td>{{ carDetail.carName }}</td>
+      <td>{{ carDetail.brandName }}</td>
+      <td>{{ carDetail.colorName }}</td>
+      <td>{{ carDetail.dailyPrice }}</td>
+      <td>{{ carDetail.description }}</td>
+      <td><button routerLink="" class="btn btn-success">Geri</button></td>
+    </tr>
+  </tbody>
+</table>

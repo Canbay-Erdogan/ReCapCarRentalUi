@@ -1,0 +1,32 @@
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="color">
+      <h5 class="mb-0" style="font-family: sans-serif,Arial, Helvetica;">
+        <li class="list-group" type="button" data-toggle="collapse" data-target="#colors" aria-expanded="true" aria-controls="color">
+          Tüm Renklerin Listesi
+        </li>
+      </h5>
+    </div>
+
+    
+    <div id="colors" class="collapse show" aria-labelledby="color" data-parent="#accordionExample">
+      <div class="card-body">
+
+        <ul class="list-group">
+          <li routerLink="" [class]="getAllColorClass()" (click)="AllColors()">
+            Tüm Renkler
+          </li>
+          <li
+            *ngFor="let color of colors"
+            (click)="setActive(color)"
+            routerLink="/cars/getbycolorid/{{color.id}}"
+            [class]="getCurrentColorClass(color)"
+          >
+            {{ color.name }}
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
